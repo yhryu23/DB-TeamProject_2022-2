@@ -1,0 +1,6 @@
+:root {
+  --main-width: 1200px;
+  --main-color: #808080;
+  --main-line-color: rgba(0, 0, 0, 0.2);
+  --main-border: 1px solid var(--main-line-color);
+}

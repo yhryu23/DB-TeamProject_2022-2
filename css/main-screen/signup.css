@@ -1,0 +1,72 @@
+#signup-main-container {
+  min-height: 744px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#signup-main-container sup {
+  color: orangered;
+}
+#signup-form-header {
+  height: 65px;
+  width: 750px;
+  display: flex;
+  justify-content: space-between;
+}
+#signup-form-header__title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 100px;
+}
+#signup-form-header__requirement {
+  margin-top: 40px;
+  color: var(--main-color);
+}
+#signup-table {
+  background-color: white;
+  width: 750px;
+  height: 475px;
+  font-size: 20px;
+}
+#signup-table th {
+  text-align: left;
+  font-weight: bold;
+  width: 150px;
+  vertical-align: middle;
+  padding-left: 50px;
+}
+#signup-table td {
+  width: 500px;
+  vertical-align: middle;
+  padding-left: 50px;
+}
+#signup-table input {
+  font-size: 20px;
+  padding-left: 20px;
+  height: 40px;
+  border: var(--main-border);
+}
+#signup-table select {
+  font-size: 20px;
+  height: 40px;
+  border: var(--main-border);
+}
+#signup-table input[name="userName"],
+#signup-table input[name="userID"],
+#signup-table input[name="userPW01"],
+#signup-table input[name="userPW02"] {
+  width: 420px;
+}
+#signup-table input[name="userTel"] {
+  width: 120px;
+}
+#signup-form input[type="submit"] {
+  border: var(--main-border);
+  background-color: #f5f5dc;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 30px;
+  width: 750px;
+  height: 70px;
+}

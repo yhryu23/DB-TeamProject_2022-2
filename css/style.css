@@ -1,0 +1,25 @@
+/* 기본 태그의 스타일 초기화 */
+@import "reset.css";
+/* 전역 변수 설정 */
+@import "variable.css";
+
+/* 화면 구성 요소 */
+@import "component/header.css";
+@import "component/footer.css";
+
+/* 메인 화면 구성 */
+@import "main-screen/signup.css";
+
+#wrap-header-main-001 {
+  height: 100%;
+}
+#wrap-header-main-002 {
+  min-height: 717px;
+  padding-top: 121px;
+  padding-bottom: 101px;
+  background-color: #f7f7f7;
+}
+.main-width-screen {
+  width: var(--main-width);
+  margin: 0 auto;
+}
