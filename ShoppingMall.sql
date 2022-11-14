@@ -1,6 +1,6 @@
 drop table master;
 drop table customer;
-drop table goods;
+-- drop table goods;
 
 
 
@@ -24,8 +24,9 @@ create table customer (
 	primary key (customer_id)
 );
 
-insert into customer values ('ë¥˜ìš©í•˜', '201827003', '123456789', '010-1234-5678', 'asdf@gmail.com', '990403');
-insert into customer values ('í™©ì¤€ì˜', '201827020', '987654321', '010-8765-4321', null, null);
+insert into customer values ('·ù¿ëÇÏ', '201827003', '123456789', '010-1234-5678', 'asdf123r@gmail.com', '990403');
+insert into customer values ('È²ÁØ¿µ', '201827020', '987654321', '010-8765-4321', null, null);
+
 
 
 /*
@@ -39,6 +40,6 @@ create table goods (
 	primary key (good_id)
 );
 
-insert into goods values ('jo001', 'ë‚˜ì´í‚¤ ìš´ë™í™”', 49900, 'ì¡°ê¹…í™”', '225,230,235,240,245,250,255,260','good4.jpg');
-insert into goods values ('jo002', 'ë‰´ë°œë€ìŠ¤ ìš´ë™í™”', 28000, 'ì¡°ê¹…í™”','225,230,235,240,245,250,255,260,265,270','good1.jpg');
+insert into goods values ('jo001', '³ªÀÌÅ° ¿îµ¿È­', 49900, 'Á¶±ëÈ­', '225,230,235,240,245,250,255,260', 'good4.jpg');
+insert into goods values ('jo002', '´º¹ß¶õ½º ¿îµ¿È­', 28000, 'Á¶±ëÈ­','225,230,235,240,245,250,255,260,265,270', 'good1.jpg');
 */
