@@ -16,7 +16,34 @@
       <div id="wrap-header-main-002">
         <%@ include file="header.jsp" %>
         <main>
-          <div class="main-width-screen"></div>
+          <div class="main-width-screen">
+            <form
+              action="loginProcess.jsp"
+              method="post"
+              name="loginForm"
+              id="login-form"
+            >
+              <label for="login_id">아이디</label>
+              <input
+                type="text"
+                name="userID"
+                placeholder="아이디를 입력해주세요"
+                minlength="5"
+                maxlength="20"
+                required
+              />
+              <label for="login_pw">비밀번호</label>
+              <input
+                type="password"
+                name="userPW"
+                placeholder="비밀번호를 입력해주세요"
+                minlength="6"
+                maxlength="20"
+                required
+              />
+              <input type="submit" value="로그인" />
+            </form>
+          </div>
         </main>
       </div>
     </div>

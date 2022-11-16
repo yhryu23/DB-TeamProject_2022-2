@@ -61,7 +61,7 @@
 #signup-table input[name="userTel"] {
   width: 120px;
 }
-#signup-form input[type="submit"] {
+#signup-form input[value="회원가입"] {
   border: var(--main-border);
   background-color: #f5f5dc;
   font-size: 22px;

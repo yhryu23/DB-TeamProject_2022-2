@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     ></script>
     <script language="JavaScript">
-      function submit_check() {
+      function signup_submit_check() {
         if (
           document.signupForm.userPW01.value !=
           document.signupForm.userPW02.value
@@ -45,7 +45,7 @@
               method="post"
               name="signupForm"
               id="signup-form"
-              onsubmit="return submit_check();"
+              onsubmit="return signup_submit_check();"
             >
               <table id="signup-table">
                 <tr>
