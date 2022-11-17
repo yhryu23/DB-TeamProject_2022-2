@@ -40,4 +40,7 @@ try {
 } catch(SQLException e) {}
 %>
 
-<% response.sendRedirect("signupSuccess.jsp"); %>
+<script language="JavaScript">
+  alert("회원가입에 성공했습니다!");
+  location.href = "login.jsp";
+</script>

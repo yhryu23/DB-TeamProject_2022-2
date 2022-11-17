@@ -23,22 +23,24 @@
               name="loginForm"
               id="login-form"
             >
-              <label for="login_id">아이디</label>
+              <label for="login-id">아이디</label>
               <input
                 type="text"
                 name="userID"
                 placeholder="아이디를 입력해주세요"
                 minlength="5"
                 maxlength="20"
+                id="login-id"
                 required
               />
-              <label for="login_pw">비밀번호</label>
+              <label for="login-pw">비밀번호</label>
               <input
                 type="password"
                 name="userPW"
                 placeholder="비밀번호를 입력해주세요"
                 minlength="6"
                 maxlength="20"
+                id="login-pw"
                 required
               />
               <input type="submit" value="로그인" />

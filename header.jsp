@@ -2,9 +2,18 @@
 <header id="header">
   <div class="main-width-screen">
     <div id="header-user">
+<%
+String loginID = (String)session.getAttribute("loginID");
+if (loginID != null) {
+%>
+      <%= loginID %>님
+      <span>|</span>
+      <a href="mypage.jsp">MY페이지</a>
+<% } else { %>
       <a href="login.jsp">로그인</a>
       <span>|</span>
       <a href="signup.jsp">회원가입</a>
+<% } %>
     </div>
     <div id="header-container">
       <a id="header-container__logo" href="home.jsp">
