@@ -2,7 +2,6 @@
   position: fixed;
   top: 0px;
   background-color: white;
-  border-bottom: var(--main-border);
   height: 120px;
 }
 #header-user {
@@ -26,12 +25,13 @@
   letter-spacing: -2px;
   word-spacing: -4px;
   margin: auto 0;
+  color: var(--main-color-002);
 }
 #header-container__search {
   display: flex;
   justify-content: space-between;
   margin: auto 0;
-  border: 3px solid var(--main-color);
+  border: 3px solid black;
   border-radius: 15px;
   width: 400px;
   height: 45px;

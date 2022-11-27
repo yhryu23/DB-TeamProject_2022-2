@@ -1,12 +1,13 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+
 <header id="header">
-  <div class="main-width-screen">
+  <div class="screen-width">
     <div id="header-user">
 <%
 String loginID = (String)session.getAttribute("loginID");
 if (loginID != null) {
 %>
-      <%= loginID %>님
+      <%=loginID%>님
       <span>|</span>
       <a href="mypage.jsp">MY페이지</a>
 <% } else { %>

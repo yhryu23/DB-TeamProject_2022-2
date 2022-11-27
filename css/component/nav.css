@@ -1,0 +1,15 @@
+#nav-001 {
+  background-color: var(--main-color-002);
+  height: 50px;
+  color: white;
+  position: fixed;
+  top: 120px;
+}
+#nav-001 > ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: x-large;
+  font-weight: bold;
+}

@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -31,6 +32,7 @@
     <div id="wrap-header-main-001">
       <div id="wrap-header-main-002">
         <%@ include file="header.jsp" %>
+        <%@ include file="nav.jsp" %>
         <main>
           <div class="main-width-screen" id="signup-main-container">
             <div id="signup-form-header">
@@ -163,7 +165,7 @@
           </div>
         </main>
       </div>
+      <%@ include file="footer.jsp" %>
     </div>
-    <%@ include file="footer.jsp" %>
   </body>
 </html>

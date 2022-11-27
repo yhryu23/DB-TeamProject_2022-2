@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -15,15 +16,15 @@
     <div id="wrap-header-main-001">
       <div id="wrap-header-main-002">
         <%@ include file="header.jsp" %>
+        <%@ include file="nav.jsp" %>
         <main>
-          <div class="main-width-screen">
+          <div class="main-width-screen" id="login-main-container">
             <form
               action="loginProcess.jsp"
               method="post"
               name="loginForm"
               id="login-form"
             >
-              <label for="login-id">아이디</label>
               <input
                 type="text"
                 name="userID"
@@ -33,7 +34,6 @@
                 id="login-id"
                 required
               />
-              <label for="login-pw">비밀번호</label>
               <input
                 type="password"
                 name="userPW"
@@ -48,7 +48,7 @@
           </div>
         </main>
       </div>
+      <%@ include file="footer.jsp" %>
     </div>
-    <%@ include file="footer.jsp" %>
   </body>
 </html>

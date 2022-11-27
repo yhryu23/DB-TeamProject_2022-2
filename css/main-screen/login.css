@@ -1,0 +1,33 @@
+#login-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+#login-form input {
+  width: 600px;
+  border: none;
+  padding: 20px 10px;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+#login-form input:not([type="submit"]) {
+  border-bottom: var(--main-border);
+  transition: border-color 0.3s ease-in-out;
+}
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.8);
+}
+#login-form input:focus {
+  border-color: var(--main-color-002);
+}
+#login-form input[value="로그인"] {
+  border: var(--main-border);
+  background-color: #f5f5dc;
+  font-size: 22px;
+  font-weight: bold;
+}

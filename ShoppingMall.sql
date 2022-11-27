@@ -1,6 +1,6 @@
 drop table master;
 drop table customer;
--- drop table goods;
+drop table itemdata;
 
 
 
@@ -29,17 +29,14 @@ insert into customer values ('황준영', '201827020', '987654321', '010-8765-4321'
 
 
 
-/*
-create table goods (
-	good_id varchar2(10),
-	good_name varchar2(50),
-	good_price int,
-	good_kind varchar2(30),
-	good_size varchar2(80),
-	good_image varchar2(50),
-	primary key (good_id)
+create table itemdata (
+	name varchar2(30),
+	price int,
+	shoesize varchar2(80),
+	image varchar2(50),
+	id varchar2(50),
+	kind varchar2(20),
+	primary key (id)
 );
 
-insert into goods values ('jo001', '나이키 운동화', 49900, '조깅화', '225,230,235,240,245,250,255,260', 'good4.jpg');
-insert into goods values ('jo002', '뉴발란스 운동화', 28000, '조깅화','225,230,235,240,245,250,255,260,265,270', 'good1.jpg');
-*/
+insert into itemdata values ('나이키 운동화', 49900, '225,230,235,240,245,250,255,260', 'good4.jpg', 'jo001', '조깅화');

@@ -5,21 +5,27 @@
 
 /* 화면 구성 요소 */
 @import "component/header.css";
+@import "component/nav.css";
 @import "component/footer.css";
 
 /* 메인 화면 구성 */
 @import "main-screen/signup.css";
+@import "main-screen/login.css";
 
 #wrap-header-main-001 {
   height: 100%;
 }
 #wrap-header-main-002 {
-  min-height: 717px;
-  padding-top: 121px;
+  min-height: 695px;
+  padding-top: 170px;
   padding-bottom: 101px;
   background-color: #f7f7f7;
 }
-.main-width-screen {
+main,
+main > div {
+  min-height: 695px;
+}
+.screen-width {
   width: var(--main-width);
   margin: 0 auto;
 }
