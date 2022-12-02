@@ -24,13 +24,13 @@ create table customer (
 	primary key (customer_id)
 );
 
-insert into customer values ('·ù¿ëÇÏ', '201827003', '123456789', '010-1234-5678', 'asdf123r@gmail.com', '990403');
-insert into customer values ('È²ÁØ¿µ', '201827020', '987654321', '010-8765-4321', null, null);
+insert into customer values ('ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '201827003', '123456789', '010-1234-5678', 'asdf123r@gmail.com', '990403');
+insert into customer values ('È²ï¿½Ø¿ï¿½', '201827020', '987654321', '010-8765-4321', null, null);
 
 
 
 create table itemdata (
-	name varchar2(30),
+	name varchar2(100),
 	price int,
 	shoesize varchar2(80),
 	image varchar2(50),
@@ -39,4 +39,4 @@ create table itemdata (
 	primary key (id)
 );
 
-insert into itemdata values ('³ªÀÌÅ° ¿îµ¿È­', 49900, '225,230,235,240,245,250,255,260', 'good4.jpg', 'jo001', 'Á¶±ëÈ­');
+insert into itemdata values ('ï¿½ï¿½ï¿½ï¿½Å°ï¿½îµ¿È­', 49900, '225,230,235,240,245,250,255,260', 'jo001.jpg', 'jo001', 'ï¿½ï¿½ï¿½ï¿½È­');

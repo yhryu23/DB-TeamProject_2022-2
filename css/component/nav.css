@@ -4,6 +4,7 @@
   color: white;
   position: fixed;
   top: 120px;
+  z-index: 1;
 }
 #nav-001 > ul {
   height: 100%;

@@ -4,12 +4,14 @@
   <div class="screen-width">
     <div id="header-user">
 <%
-String loginID = (String)session.getAttribute("loginID");
+String loginID = (String)session.getAttribute("login_id");
 if (loginID != null) {
 %>
       <%=loginID%>님
       <span>|</span>
       <a href="mypage.jsp">MY페이지</a>
+      <span>|</span>
+      <a href="logout.jsp">로그아웃</a>
 <% } else { %>
       <a href="login.jsp">로그인</a>
       <span>|</span>
