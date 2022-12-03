@@ -3,7 +3,10 @@
   top: 0px;
   background-color: white;
   height: 120px;
-  z-index: 1;
+  z-index: 5;
+}
+#header i:hover {
+  color: var(--main-color-002);
 }
 #header-user {
   float: right;
@@ -37,13 +40,13 @@
   width: 400px;
   height: 45px;
 }
-#header-container__search input[name="search"] {
+#header-container__search input[name="itemID"] {
   margin-left: 15px;
   border: none;
   width: 300px;
   font-size: 15px;
 }
-#header-container__search button[aria-label="submit"] {
+#header-container__search button[type="submit"] {
   margin-right: 15px;
   border: none;
   background-color: transparent;

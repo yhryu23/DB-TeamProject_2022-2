@@ -37,7 +37,9 @@ try {
 
   pstmt.close();
   conn.close();
-} catch(SQLException e) {}
+} catch(Exception e) {
+  e.printStackTrace();
+}
 %>
 
 <script language="JavaScript">

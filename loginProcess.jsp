@@ -1,6 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="javax.naming.*"%>
-<%@ page import="java.sql.*, javax.naming.*, javax.sql.DataSource" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="javax.naming.*" %>
+<%@ page import="java.sql.*, javax.sql.DataSource" %>
+
 <%
 String userID = request.getParameter("userID");
 String userPW = request.getParameter("userPW");
@@ -11,11 +12,12 @@ String sql = "";
 request.setCharacterEncoding("utf-8");
 
 Class.forName("oracle.jdbc.driver.OracleDriver");
+
 try {
   String url = "jdbc:oracle:thin:@127.0.0.1:1521";
   Connection conn = DriverManager.getConnection(url,"test1","1234");
   
-  sql = "SELECT * FROM customer WHERE customer_id=? and customer_pw = ?";
+  sql = "SELECT * FROM customer WHERE customer_id= ? and customer_pw = ?";
   pstmt = conn.prepareStatement(sql);
   pstmt.setString(1, userID);
   pstmt.setString(2, userPW);
@@ -24,7 +26,7 @@ try {
   if(rs.next()) {
     session.setAttribute("login_id", userID);
   }
-
+  
   rs.close();
   pstmt.close();
   conn.close();
@@ -41,9 +43,7 @@ if(session.getAttribute("login_id") == null) {
   location.href = "login.jsp";
 </script>
 <%
-}
-
-else {
+} else {
   response.sendRedirect("home.jsp");
 }
 %>

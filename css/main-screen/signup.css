@@ -1,11 +1,8 @@
-#signup-main-container {
+#signup-main-screen {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-#signup-main-container sup {
-  color: orangered;
 }
 #signup-form-header {
   height: 65px;
@@ -20,7 +17,7 @@
 }
 #signup-form-header__requirement {
   margin-top: 40px;
-  color: var(--main-color);
+  color: var(--main-color-001);
 }
 #signup-table {
   background-color: white;

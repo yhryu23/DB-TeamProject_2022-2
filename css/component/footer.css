@@ -4,6 +4,7 @@
   border-top: var(--main-border);
   position: relative;
   transform: translateY(-100%);
+  z-index: 5;
 }
 #footer-section {
   padding: 20px 40px;

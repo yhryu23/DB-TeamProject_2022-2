@@ -34,12 +34,11 @@
         <%@ include file="header.jsp" %>
         <%@ include file="nav.jsp" %>
         <main>
-          <div class="main-width-screen" id="signup-main-container">
+          <div class="main-width-screen" id="signup-main-screen">
             <div id="signup-form-header">
               <h2 id="signup-form-header__title">회원가입</h2>
               <span id="signup-form-header__requirement">
-                ID 5자 이상, PW 6자 이상 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-                필수항목<sup>*</sup>
+                ID 5자 이상, PW 6자 이상
               </span>
             </div>
             <form
@@ -51,7 +50,7 @@
             >
               <table id="signup-table">
                 <tr>
-                  <th>이름<sup>*</sup></th>
+                  <th>이름</th>
                   <td>
                     <input
                       type="text"
@@ -63,7 +62,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <th>아이디<sup>*</sup></th>
+                  <th>아이디</th>
                   <td>
                     <input
                       type="text"
@@ -76,7 +75,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <th>비밀번호<sup>*</sup></th>
+                  <th>비밀번호</th>
                   <td>
                     <input
                       type="password"
@@ -89,7 +88,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <th>비밀번호 확인<sup>*</sup></th>
+                  <th>비밀번호 확인</th>
                   <td>
                     <input
                       type="password"
@@ -101,11 +100,10 @@
                   </td>
                 </tr>
                 <tr>
-                  <th>휴대폰 번호<sup>*</sup></th>
+                  <th>휴대폰 번호</th>
                   <td>
                     <select name="userTel" required>
-                      <option value="" disabled selected>::선택::</option>
-                      <option value="010">010</option>
+                      <option value="010" selected>010</option>
                       <option value="011">011</option>
                       <option value="016">016</option>
                       <option value="017">017</option>
@@ -132,13 +130,15 @@
                 <tr>
                   <th>이메일</th>
                   <td>
-                    <input type="text" name="userEmail" maxlength="20" />
+                    <input
+                      type="text"
+                      name="userEmail"
+                      maxlength="20"
+                      required
+                    />
                     &nbsp;@&nbsp;
                     <select name="userEmail">
-                      <option value="" disabled selected>
-                        ::::::선택::::::
-                      </option>
-                      <option value="naver.com">naver.com</option>
+                      <option value="naver.com" selected>naver.com</option>
                       <option value="gmail.com">gmail.com</option>
                       <option value="hanmail.net">hanmail.net</option>
                       <option value="hotmail.com">hotmail.com</option>
@@ -155,7 +155,9 @@
                       type="text"
                       name="userBirthday"
                       placeholder="ex) 990403"
+                      minlength="6"
                       maxlength="6"
+                      required
                     />
                   </td>
                 </tr>

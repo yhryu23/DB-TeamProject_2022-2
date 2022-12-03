@@ -1,0 +1,37 @@
+#item-detail-main-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#item-description {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  width: 1100px;
+  padding: 50px;
+}
+#item-description__image > img {
+  width: 350px;
+  height: 350px;
+}
+#item-description__text {
+  width: 500px;
+  height: 350px;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+#item-description + button[aria-label="submit"] {
+  border: var(--main-border);
+  background-color: #f5f5dc;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 30px;
+  width: 750px;
+  height: 70px;
+  cursor: pointer;
+}

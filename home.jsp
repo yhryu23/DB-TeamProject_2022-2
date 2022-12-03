@@ -1,9 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@ page import="java.sql.*" %>
-<%@ page import="java.sql.ResultSet" %>
-<%@ page import="java.sql.PreparedStatement" %>
-<%@ page import="java.sql.DriverManager" %>
-<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.*, javax.sql.DataSource" %>
 <% request.setCharacterEncoding("utf-8"); %>
 
 <!DOCTYPE html>
@@ -23,13 +19,6 @@
       <div id="wrap-header-main-002">
         <%@ include file="header.jsp"%>
         <%@ include file="nav.jsp" %>
-        
-<%
-int this_category = 0;
-if(request.getParameter("category") != null)
-  this_category = Integer.parseInt(request.getParameter("category"));
-%>
-
         <main>
           <div class="screen-width">
             <div class="section">
@@ -41,19 +30,19 @@ if(request.getParameter("category") != null)
                 <ul class="slidelist">
                   <li>
                     <a>
-                      <img src="./refund.jpg" />
+                      <img src="./banner-image/refund.jpg" />
                     </a>
                   </li>
 
                   <li>
                     <a>
-                      <img src="./sale.jpg" />
+                      <img src="./banner-image/sale.jpg" />
                     </a>
                   </li>
 
                   <li>
                     <a>
-                      <img src="./c.jpg" />
+                      <img src="./banner-image/c.jpg" />
                     </a>
                   </li>
                 </ul>
@@ -75,11 +64,13 @@ if(request.getParameter("category") != null)
                   </div>
                 </div>
               </div>
-<%
-String outName, outSize, outImage;
-int outPrice;
+            </div>
 
-String item = null;
+            <div class="sectionwrap row">
+<%
+String outName, outImage, outID;
+int outPrice; String item = null;
+
 PreparedStatement pstmt = null;
 ResultSet rs = null;
 
@@ -88,20 +79,33 @@ Class.forName("oracle.jdbc.driver.OracleDriver");
 try {
   String url = "jdbc:oracle:thin:@127.0.0.1:1521";
   Connection conn = DriverManager.getConnection(url,"test1","1234");
-  
+
   item = "select * from itemdata";
   pstmt = conn.prepareStatement(item);
   rs = pstmt.executeQuery(item);
-  
   while(rs.next()) {
     outName = rs.getString(1);
     outPrice = rs.getInt(2);
-    outSize = rs.getString(3);
     outImage = rs.getString(4);
+    outID = rs.getString(5);
+  %>
+              <div class="productlist cell">
+                <div class="imgbox">
+                  <% out.print("<img src=./item-image/" + outImage + ">"); %>
+                </div>
+                <div class="txtbox">
+                  이름: <%=outName%><br />
+                  가격: <%=outPrice%><br /><br />
+                  <a href="viewItem.jsp?itemID=<%=outID%>">상품 페이지 이동</a>
+                </div>
+              </div>
+<%
   }
+  
   rs.close();
   pstmt.close();
   conn.close();
+
 } catch(Exception e) {
   e.printStackTrace();
 }

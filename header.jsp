@@ -22,19 +22,19 @@ if (loginID != null) {
       <a id="header-container__logo" href="home.jsp">
         <h1>Shopping Mall</h1>
       </a>
-      <div id="header-container__search">
+      <form action="viewItem.jsp" method="get" id="header-container__search">
         <input
           type="text"
-          name="search"
-          placeholder="검색어를 입력해주세요"
+          name="itemID"
+          placeholder="상품코드를 입력해주세요"
           required
         />
-        <button aria-label="submit">
+        <button type="submit">
           <a href="#">
             <i class="fa-solid fa-magnifying-glass fa-lg"></i>
           </a>
         </button>
-      </div>
+      </form>
       <div id="header-container__goods">
         <a href="#">
           <i class="fa-regular fa-heart fa-2x"></i>

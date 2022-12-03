@@ -1,9 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@ page import="java.sql.*" %>
-<%@ page import="java.sql.ResultSet" %>
-<%@ page import="java.sql.PreparedStatement" %>
-<%@ page import="java.sql.DriverManager" %>
-<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.*, javax.sql.DataSource" %>
 <% request.setCharacterEncoding("utf-8"); %>
 
 <!DOCTYPE html>
@@ -25,8 +21,9 @@
         <%@ include file="nav.jsp" %>
         <main>
           <div class="screen-width">
+            <div class="sectionwrap row">
 <%
-String outName, outImage;
+String outName, outImage, outID;
 int outPrice;
 
 String item = null;
@@ -39,72 +36,45 @@ try {
   String url = "jdbc:oracle:thin:@127.0.0.1:1521";
   Connection conn = DriverManager.getConnection(url,"test1","1234");
   
-  item = "select * from itemdata";
+  switch(this_category) {
+    case 1 : item = "select * from itemdata where kind = '운동화'"; break;
+    case 2 : item = "select * from itemdata where kind = '스포츠'"; break;
+    case 3 : item = "select * from itemdata where kind = '구두'"; break;
+    case 4 : item = "select * from itemdata where kind = '샌들'"; break;
+    case 5 : item = "select * from itemdata where kind = '부츠'"; break;
+    default : item = "select * from itemdata"; break;
+  }
   pstmt = conn.prepareStatement(item);
-  rs = pstmt.executeQuery(item);
+  rs = pstmt.executeQuery();
   
   while(rs.next()) {
     outName = rs.getString(1);
     outPrice = rs.getInt(2);
     outImage = rs.getString(4);
+    outID = rs.getString(5);
 %>
-            <div class="sectionwrap row">
               <div class="productlist cell">
                 <div class="imgbox">
-                  <% out.print("<img src=./image/" + outImage + ">");%>
+                  <% out.print("<img src=./item-image/" + outImage + ">"); %>
                 </div>
                 <div class="txtbox">
                   이름: <%=outName%><br />
-                  가격: <%=outPrice%><br />
+                  가격: <%=outPrice%><br /><br />
+                  <a href="viewItem.jsp?itemID=<%=outID%>">상품 상세 페이지</a>
                 </div>
               </div>
-              <div class="productlist cell">
-                <div class="imgbox"></div>
-                <div class="txtbox">
-                  이름:<br />
-                  가격:<br />
-                </div>
-              </div>
-              <div class="productlist cell">
-                <div class="imgbox"></div>
-                <div class="txtbox">
-                  이름:<br />
-                  가격:<br />
-                </div>
-              </div>
-              <div class="productlist cell">
-                <div class="imgbox"></div>
-                <div class="txtbox">
-                  이름:<br />
-                  가격:<br />
-                </div>
-              </div>
-              <div class="productlist cell">
-                <div class="imgbox"></div>
-                <div class="txtbox">
-                  이름:<br />
-                  가격:<br />
-                </div>
-              </div>
-              <div class="productlist cell">
-                <div class="imgbox"></div>
-                <div class="txtbox">
-                  이름:<br />
-                  가격:<br />
-                </div>
-              </div>
-            </div>
 <%
-  }
+}
 
-  rs.close();
-  pstmt.close();
-  conn.close();
+rs.close();
+pstmt.close();
+conn.close();
 
 } catch(Exception e) {
   e.printStackTrace();
 }
 %>
+            </div>
           </div>
         </main>
       </div>
