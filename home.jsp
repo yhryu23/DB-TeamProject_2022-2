@@ -25,7 +25,6 @@
               <input type="radio" name="slide" id="refund" checked="" />
               <input type="radio" name="slide" id="sale" />
               <input type="radio" name="slide" id="c" />
-
               <div class="slidewrap">
                 <ul class="slidelist">
                   <li>
@@ -69,8 +68,9 @@
             <div class="sectionwrap row">
 <%
 String outName, outImage, outID;
-int outPrice; String item = null;
+int outPrice;
 
+String item = null;
 PreparedStatement pstmt = null;
 ResultSet rs = null;
 
@@ -83,19 +83,20 @@ try {
   item = "select * from itemdata";
   pstmt = conn.prepareStatement(item);
   rs = pstmt.executeQuery(item);
+  
   while(rs.next()) {
     outName = rs.getString(1);
     outPrice = rs.getInt(2);
     outImage = rs.getString(4);
     outID = rs.getString(5);
-  %>
+%>
               <div class="productlist cell">
                 <div class="imgbox">
                   <% out.print("<img src=./item-image/" + outImage + ">"); %>
                 </div>
                 <div class="txtbox">
-                  이름: <%=outName%><br />
-                  가격: <%=outPrice%><br /><br />
+                  <span>이름: <%=outName%></span><br />
+                  <span>가격: <%=outPrice%></span><br /><br />
                   <a href="viewItem.jsp?itemID=<%=outID%>">상품 페이지 이동</a>
                 </div>
               </div>

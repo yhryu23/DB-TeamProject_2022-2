@@ -33,6 +33,7 @@ try {
   rs.close();
   pstmt.close();
   conn.close();
+  
 } catch(Exception e) {
   e.printStackTrace();
 }
@@ -85,6 +86,20 @@ try {
               </div>
             </div>
             <button aria-label="submit">구매하기</button>
+<%
+if(loginID != null) {
+  if((boolean)session.getAttribute("isMaster")) {
+%>
+            <div id="master-option">
+              <span>관리자 옵션</span><br />
+              <a href="update_item.jsp?itemID=<%=outID%>">수정</a>
+              <span>|</span>
+              <a href="delete_item.jsp?itemID=<%=outID%>">삭제</a>
+            </div>
+<%
+  }
+}
+%>
           </div>
         </main>
       </div>

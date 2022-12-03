@@ -1,7 +1,8 @@
-/* 기본 태그의 스타일 초기화 */
-@import "reset.css";
 /* 전역 변수 설정 */
 @import "variable.css";
+
+/* 기본 태그의 스타일 초기화 */
+@import "reset.css";
 
 /* 화면 구성 요소 */
 @import "component/header.css";
@@ -12,6 +13,7 @@
 @import "main-screen/signup.css";
 @import "main-screen/login.css";
 @import "main-screen/item-detail.css";
+@import "main-screen/add-item.css";
 
 #wrap-header-main-001 {
   height: 100%;
@@ -29,6 +31,12 @@ main > div {
 .screen-width {
   width: var(--main-width);
   margin: 0 auto;
+}
+.column-flex-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /*  */
@@ -126,11 +134,10 @@ main > div {
 .sectionwrap > .productlist {
   width: calc((100% - 30px) / 4);
   height: auto;
-  margin-right: 10px;
+  margin: auto 4px;
   padding: 20px;
   box-sizing: border-box;
   border-bottom: 5px solid var(--main-line-color);
-  margin-bottom: 20px;
 }
 
 .sectionwrap > .productlist:nth-child(4n) {
@@ -148,10 +155,4 @@ main > div {
 .sectionwrap > .productlist > .txtbox {
   color: black;
   text-align: center;
-}
-
-/*  */
-
-.sectionwrap > .productlist > .txtbox a:hover {
-  color: var(--main-color-002);
 }

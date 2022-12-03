@@ -143,3 +143,10 @@ a {
   color: inherit;
   text-decoration: none;
 }
+a:hover {
+  color: var(--main-color-002);
+}
+label:hover {
+  color: var(--main-color-002);
+  cursor: pointer;
+}

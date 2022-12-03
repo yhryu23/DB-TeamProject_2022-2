@@ -5,18 +5,34 @@
     <div id="header-user">
 <%
 String loginID = (String)session.getAttribute("login_id");
-if (loginID != null) {
+if(loginID != null) {
+  if((boolean)session.getAttribute("isMaster")) {
+%>
+      <%=loginID%>님
+      <span>|</span>
+      <a href="add_item.jsp">상품 등록</a>
+      <span>|</span>
+      <a href="logout.jsp">로그아웃</a>
+<%
+  }
+  else {
 %>
       <%=loginID%>님
       <span>|</span>
       <a href="mypage.jsp">MY페이지</a>
       <span>|</span>
       <a href="logout.jsp">로그아웃</a>
-<% } else { %>
+<%
+  }
+}
+else {
+%>
       <a href="login.jsp">로그인</a>
       <span>|</span>
       <a href="signup.jsp">회원가입</a>
-<% } %>
+<%
+}
+%>
     </div>
     <div id="header-container">
       <a id="header-container__logo" href="home.jsp">

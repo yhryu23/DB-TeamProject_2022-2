@@ -1,57 +1,58 @@
-#signup-form-header {
+#additem-form-header {
   height: 65px;
   width: 750px;
   display: flex;
   justify-content: space-between;
 }
-#signup-form-header__title {
+#additem-form-header__title {
   font-size: 30px;
   font-weight: bold;
   margin-left: 100px;
 }
-#signup-form-header__requirement {
-  margin-top: 40px;
-  color: var(--main-color-001);
-}
-#signup-table {
+#additem-table {
   background-color: white;
   width: 750px;
   height: 475px;
   font-size: 20px;
 }
-#signup-table th {
+#additem-table th {
   text-align: left;
   font-weight: bold;
   width: 150px;
   vertical-align: middle;
   padding-left: 50px;
 }
-#signup-table td {
+#additem-table td {
   width: 500px;
   vertical-align: middle;
   padding-left: 50px;
 }
-#signup-table input {
+#additem-table input {
   font-size: 20px;
   padding-left: 20px;
   height: 40px;
   border: var(--main-border);
 }
-#signup-table select {
+#additem-table select {
   font-size: 20px;
   height: 40px;
   border: var(--main-border);
 }
-#signup-table input[name="userName"],
-#signup-table input[name="userID"],
-#signup-table input[name="userPW01"],
-#signup-table input[name="userPW02"] {
+#additem-table input[name="itemName"],
+#additem-table input[name="itemID"],
+#additem-table input[name="itemPrice"],
+#additem-table input[name="itemImage"] {
   width: 420px;
 }
-#signup-table input[name="userTel"] {
-  width: 120px;
+#additem-table input[type="radio"],
+#additem-table input[type="checkbox"] {
+  cursor: pointer;
 }
-#signup-form input[value="회원가입"] {
+#additem-table label {
+  position: relative;
+  bottom: 12px;
+}
+#additem-form input[value="상품등록"] {
   border: var(--main-border);
   background-color: #f5f5dc;
   font-size: 22px;

@@ -34,7 +34,7 @@
         <%@ include file="header.jsp" %>
         <%@ include file="nav.jsp" %>
         <main>
-          <div class="main-width-screen" id="signup-main-screen">
+          <div class="main-width-screen column-flex-screen">
             <div id="signup-form-header">
               <h2 id="signup-form-header__title">회원가입</h2>
               <span id="signup-form-header__requirement">
