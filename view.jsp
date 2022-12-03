@@ -25,6 +25,7 @@
 <%
 String outName, outImage, outID;
 int outPrice;
+String sql;
 
 String item = null;
 PreparedStatement pstmt = null;
@@ -46,6 +47,15 @@ try {
   }
   pstmt = conn.prepareStatement(item);
   rs = pstmt.executeQuery();
+
+  if(search_item != null) {
+    sql = "select * from itemdata where name like ? or id like ? or kind like ?";
+    pstmt = conn.prepareStatement(sql);
+    pstmt.setString(1, "%" + search_item + "%");
+    pstmt.setString(2, "%" + search_item + "%");
+    pstmt.setString(3, "%" + search_item + "%");
+    rs = pstmt.executeQuery();
+  }
   
   while(rs.next()) {
     outName = rs.getString(1);
@@ -60,11 +70,11 @@ try {
                 <div class="txtbox">
                   이름: <%=outName%><br />
                   가격: <%=outPrice%><br /><br />
-                  <a href="viewItem.jsp?itemID=<%=outID%>">상품 상세 페이지</a>
+                  <a href="viewItem.jsp?itemID=<%=outID%>">상품 상세페이지</a>
                 </div>
               </div>
 <%
-}
+  }
 
 rs.close();
 pstmt.close();

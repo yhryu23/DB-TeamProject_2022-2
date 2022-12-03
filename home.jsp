@@ -97,7 +97,7 @@ try {
                 <div class="txtbox">
                   <span>이름: <%=outName%></span><br />
                   <span>가격: <%=outPrice%></span><br /><br />
-                  <a href="viewItem.jsp?itemID=<%=outID%>">상품 페이지 이동</a>
+                  <a href="viewItem.jsp?itemID=<%=outID%>">상품 상세페이지</a>
                 </div>
               </div>
 <%

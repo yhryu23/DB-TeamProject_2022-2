@@ -36,7 +36,6 @@
                       type="text"
                       name="itemName"
                       placeholder="상품명을 입력해주세요"
-                      maxlength="20"
                       required
                     />
                   </td>
@@ -48,8 +47,6 @@
                       type="text"
                       name="itemID"
                       placeholder="상품코드를 입력해주세요"
-                      minlength="5"
-                      maxlength="20"
                       required
                     />
                   </td>

@@ -1,58 +1,61 @@
-#additem-form-header {
+#updateitem-form-header {
   height: 65px;
   width: 750px;
   display: flex;
   justify-content: space-between;
 }
-#additem-form-header__title {
+#updateitem-form-header__title {
   font-size: 30px;
   font-weight: bold;
   margin-left: 100px;
 }
-#additem-table {
+#updateitem-table {
   background-color: white;
   width: 750px;
   height: 475px;
   font-size: 20px;
 }
-#additem-table th {
+#updateitem-table th {
   text-align: left;
   font-weight: bold;
   width: 150px;
   vertical-align: middle;
   padding-left: 50px;
 }
-#additem-table td {
+#updateitem-table td {
   width: 500px;
   vertical-align: middle;
   padding-left: 50px;
 }
-#additem-table input {
+#updateitem-table input {
   font-size: 20px;
   padding-left: 20px;
   height: 40px;
   border: var(--main-border);
 }
-#additem-table select {
+#updateitem-table select {
   font-size: 20px;
   height: 40px;
   border: var(--main-border);
 }
-#additem-table input[name="itemName"],
-#additem-table input[name="itemID"],
-#additem-table input[name="itemPrice"],
-#additem-table input[name="itemImage"] {
+#updateitem-table input[name="itemID"] {
+  cursor: default;
+}
+#updateitem-table input[name="itemName"],
+#updateitem-table input[name="itemID"],
+#updateitem-table input[name="itemPrice"],
+#updateitem-table input[name="itemImage"] {
   width: 420px;
 }
-#additem-table input[type="radio"],
-#additem-table input[type="checkbox"] {
+#updateitem-table input[type="radio"],
+#updateitem-table input[type="checkbox"] {
   cursor: pointer;
 }
-#additem-table label {
+#updateitem-table label {
   position: relative;
   bottom: 12px;
 }
-#additem-form input[type="submit"] {
+#updateitem-form input[type="submit"] {
   border: var(--main-border);
   background-color: #f5f5dc;
   font-size: 22px;
@@ -60,8 +63,4 @@
   margin-top: 30px;
   width: 750px;
   height: 70px;
-}
-#additem-form input[type="submit"]:hover {
-  cursor: pointer;
-  background-color: yellow;
 }

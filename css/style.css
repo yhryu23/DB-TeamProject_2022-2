@@ -14,6 +14,7 @@
 @import "main-screen/login.css";
 @import "main-screen/item-detail.css";
 @import "main-screen/add-item.css";
+@import "main-screen/update-item.css";
 
 #wrap-header-main-001 {
   height: 100%;

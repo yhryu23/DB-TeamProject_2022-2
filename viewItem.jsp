@@ -94,7 +94,11 @@ if(loginID != null) {
               <span>관리자 옵션</span><br />
               <a href="update_item.jsp?itemID=<%=outID%>">수정</a>
               <span>|</span>
-              <a href="delete_item.jsp?itemID=<%=outID%>">삭제</a>
+              <a
+                href="delete_item.jsp?itemID=<%=outID%>"
+                onclick="return confirm('정말 삭제하시겠습니까?');">
+                삭제
+              </a>
             </div>
 <%
   }

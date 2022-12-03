@@ -25,9 +25,14 @@
 #login-form input:focus {
   border-color: var(--main-color-002);
 }
-#login-form input[value="로그인"] {
+#login-form input[type="submit"] {
   border: var(--main-border);
   background-color: #f5f5dc;
+  width: 620px;
   font-size: 22px;
   font-weight: bold;
+}
+#login-form input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: yellow;
 }

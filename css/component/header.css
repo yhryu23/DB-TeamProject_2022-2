@@ -37,7 +37,7 @@
   width: 400px;
   height: 45px;
 }
-#header-container__search input[name="itemID"] {
+#header-container__search input[name="search"] {
   margin-left: 15px;
   border: none;
   width: 300px;

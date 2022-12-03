@@ -38,11 +38,19 @@ else {
       <a id="header-container__logo" href="home.jsp">
         <h1>Shopping Mall</h1>
       </a>
-      <form action="viewItem.jsp" method="get" id="header-container__search">
+      <form action="view.jsp" method="get" id="header-container__search">
         <input
           type="text"
-          name="itemID"
-          placeholder="상품코드를 입력해주세요"
+          name="search"
+          placeholder="검색어를 입력해주세요"
+<%
+String search_item = request.getParameter("search");
+if(search_item != null) {
+%>
+          value="<%=search_item%>"
+<%
+}
+%>
           required
         />
         <button type="submit">
