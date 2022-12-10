@@ -4,7 +4,7 @@
 <%
 request.setCharacterEncoding("utf-8");
 
-String itemID = request.getParameter("itemID");
+String userID = (String)session.getAttribute("login_id");
 
 Class.forName("oracle.jdbc.driver.OracleDriver");
 
@@ -12,8 +12,8 @@ try {
   String url = "jdbc:oracle:thin:@127.0.0.1:1521";
 	Connection conn = DriverManager.getConnection(url,"test1","1234");
 
-  PreparedStatement pstmt = conn.prepareStatement("delete from itemdata where id = ?");
-  pstmt.setString(1, itemID);
+  PreparedStatement pstmt = conn.prepareStatement("delete from customer where customer_id = ?");
+  pstmt.setString(1, userID);
   pstmt.executeUpdate();
 
   pstmt.close();
@@ -23,5 +23,5 @@ try {
   e.printStackTrace();
 }
 
-response.sendRedirect("view.jsp");
+response.sendRedirect("logout.jsp");
 %>

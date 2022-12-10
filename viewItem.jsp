@@ -57,7 +57,7 @@ try {
         <%@ include file="header.jsp"%>
         <%@ include file="nav.jsp" %>
         <main>
-          <div class="screen-width" id="item-detail-main-screen">
+          <div class="screen-width column-flex-screen">
             <div id="item-description">
               <div id="item-description__image">
                 <% out.print("<img src=./item-image/" + outImage + ">"); %>

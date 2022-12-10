@@ -19,7 +19,7 @@ if(loginID != null) {
 %>
       <%=loginID%>님
       <span>|</span>
-      <a href="mypage.jsp">MY페이지</a>
+      <a href="mypage.jsp">내 정보</a>
       <span>|</span>
       <a href="logout.jsp">로그아웃</a>
 <%

@@ -11,6 +11,20 @@
       src="https://kit.fontawesome.com/c53c47d58c.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function isChecked() {
+        sizecheck = document.getElementsByName("itemSize");
+
+        for (count = i = 0; i < sizecheck.length; i++)
+          count += sizecheck[i].checked;
+
+        if (count == 0) {
+          alert("사이즈는 하나 이상 선택해주세요.");
+          return false;
+        }
+        return true;
+      }
+    </script>
   </head>
   <body>
     <div id="wrap-header-main-001">
@@ -23,6 +37,7 @@
               <h2 id="additem-form-header__title">상품 등록</h2>
             </div>
             <form
+              onsubmit="return isChecked();"
               action="additemProcess.jsp"
               method="post"
               name="additemForm"
@@ -120,7 +135,9 @@ for(int i=220; i<=300; i+=5) {
                       value="<%=i%>"
                       id="additem-size-<%=i%>"
                     />
+                    <a href="javascript:check()"></a>
                     <label for="additem-size-<%=i%>"><%=i%></label>
+
 <%
 }
 %>

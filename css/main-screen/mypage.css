@@ -1,0 +1,27 @@
+#view-profile-main-screen {
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+#view-profile {
+  width: 400px;
+  height: 250px;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: white;
+  padding: 75px;
+}
+#view-profile + div a {
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}
+#view-profile + div span {
+  margin: auto 40px;
+  color: var(--main-line-color);
+}
